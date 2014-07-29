@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <style>
+            * { box-sizing: border-box;}
+            #log { background: #333; bottom: 44px; color: #fefefe; font: 18px/22px "Courier", sans-serif; left: 0; overflow: auto; padding: 10px; position: fixed; top: 0; width: 100%;}
+            .input-echo { border: none; border-top: 1px solid #666; bottom: 0; font-size: 18px; height: 44px; left: 0; line-height: 22px; padding: 10px; position: fixed; width: 100%;}
+        </style>
+    </head>
+    <body>
+        <div id="log"></div>
+        <form id="form-echo" action="" method="POST">
+            <input type="text" id="input-echo" class="input-echo" placeholder="Enter message...">
+        </form>
+
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/socket.io.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
